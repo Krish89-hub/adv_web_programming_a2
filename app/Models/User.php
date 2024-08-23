@@ -11,7 +11,7 @@ class User extends Eloquent implements \Illuminate\Contracts\Auth\Authenticatabl
 {
      use \Illuminate\Auth\Authenticatable;
     use HasFactory, Notifiable;
-
+    protected $collection = 'users';
     /**
      * The attributes that are mass assignable.
      *
