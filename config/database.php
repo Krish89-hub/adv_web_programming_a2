@@ -32,8 +32,8 @@ return [
     'connections' => [
         'mongodb' => [
             'driver' => 'mongodb',
-            'dsn' => env('MONGO_DB_CONNECTION').'://'.env('MONGO_DB_HOST').':'.env('MONGO_DB_PORT'),
-            'database' => env('MONGO_DB_DATABASE'),
+            'dsn' => env('MONGODB_CONNECTION').'://'.env('MONGODB_HOST').':'.env('MONGODB_PORT'),
+            'database' => env('MONGODB_DATABASE'),
         ],
         'sqlite' => [
             'driver' => 'sqlite',

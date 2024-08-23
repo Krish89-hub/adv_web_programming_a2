@@ -6,9 +6,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
-class User extends Authenticatable
+use Mongodb\Laravel\Eloquent\Model as Eloquent;
+class User extends Eloquent implements \Illuminate\Contracts\Auth\Authenticatable
 {
+     use \Illuminate\Auth\Authenticatable;
     use HasFactory, Notifiable;
 
     /**
@@ -20,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
