@@ -64,3 +64,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Configuring MongoDb
+Install mongodb server if not installed. You can install using this [link](https://www.mongodb.com/try/download/community). Visit [link](https://www.mongodb.com/try/download/community) download the msi
+Install mongodb extension. Make sure you install the right extension. Check for ts,nts and x86, x64. [Download Extension here](https://github.com/mongodb/mongo-php-driver/releases/)
+
+## Run Project
+- run ```composer install``` to insure all the required compser liberaries are install
+- run ```npm install``` or ```npm install --legacy-peer-deps``` to install required node libraries (Make sure you have node environment setup)
+- run ```php artisan migrate``` to initialize your db
+- run ```php artisan db:seed``` to add initial data to db
+- run ```php artisan serve``` to run your project
