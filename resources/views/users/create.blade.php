@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Create New User</h1>
-
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Create New User</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+        </div>
+      </div>
     <!-- Display validation errors -->
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,27 +21,21 @@
     <form action="{{ route('users.store') }}" method="POST">
         @csrf
 
-        <div class="form-group">
+        <div class="form-group mb-3">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" class="form-control" value="{{ old('name') }}" required>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mb-3">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" required>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mb-3">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" class="form-control" required>
         </div>
-
-        <div class="form-group">
-            <label for="password_confirmation">Confirm Password:</label>
-            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
-        </div>
-
-        <div class="form-group">
+        <div class="form-group mb-3">
             <label for="role">Role:</label>
             <select name="role" id="role" class="form-control" required>
                 <option value="">Select Role</option>
@@ -48,8 +44,7 @@
             </select>
         </div>
 
-        <button type="submit" class="btn btn-primary">Create User</button>
-        <a href="{{ route('users.index') }}" class="btn btn-secondary">Back to Users</a>
+        <button type="submit" class="btn btn-outline-primary">Create User</button>
+        <a href="{{ route('users.index') }}" class="btn btn-outline-secondary">Back to Users</a>
     </form>
-</div>
 @endsection

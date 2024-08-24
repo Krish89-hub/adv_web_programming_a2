@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Edit User</h1>
-
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Edit User</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+        </div>
+      </div>
     <!-- Display validation errors -->
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -53,5 +55,5 @@
         <button type="submit" class="btn btn-primary">Update User</button>
         <a href="{{ route('users.index') }}" class="btn btn-secondary">Back to Users</a>
     </form>
-</div>
+
 @endsection
