@@ -9,7 +9,7 @@ class PostsController extends BaseController{
         return $this->sendResponse($all,"");
     }
     public function getSinglePost(Request $request,string $id){
-        $post = Post::find($id);
+        $post = Post::with("user")->find($id);
         return $this->sendResponse($post,"");
     }
     public function store(Request $request)

@@ -72,7 +72,7 @@ Install mongodb extension. Make sure you install the right extension. Check for 
 
 ## Run Project
 - run ```composer install``` to insure all the required compser liberaries are install
-- run ```npm install``` or ```npm install --legacy-peer-deps``` to install required node libraries (Make sure you have node environment setup)
 - run ```php artisan migrate``` to initialize your db
+- Optional: Or run ```php artisan migrate:fresh``` to initialize your db in case you are already run the migration
 - run ```php artisan db:seed``` to add initial data to db
 - run ```php artisan serve``` to run your project
